@@ -38,6 +38,22 @@
 
 
 @media screen and (min-width: 40em) {
+    li.hide_desktop {
+        display: none;
+    }
+    
+  .gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+	margin-top: .5em;
+  }
+  .navLi {
+  	clear: none;
+  }
   .js .nav-collapse {
     position: relative;
   }
@@ -50,30 +66,159 @@
   
   /* my addition - rf */
 
-  li.navLi {
+  .navList {
+	  width: 36.7em;
+	  float: none;
+  }
+    .family .navList {
+       width: 29em;
+   }
+    li.navLi {
 	  width: auto;
 	  border-right-style: solid;
 	  border-right-width: thin;
-	  padding: .2em .47em .1em .47em;
+	  padding: .2em .3em .1em .3em;
 	  font-size: 90%;
   }
   li.navLi.noBorder{
 	  border: none;
   }
+
   .title {
 	  font-size: 2.4em;
   }
   .tagline {
 	  font-size: 1.5em;
   }
-  .navList {
-	  width: 35em;
-	  float: none;
-  }
+
+    
   .top {
-	  margin: 1em 0em;
+	  margin: 1em 0em 0em 0em;
   }
+.pre-k .top, .family .top, .apprentice .top {
+        padding-bottom: 0;
+    }
   .special {
 	margin: 1em 0em;
   }
+  .statesman p {
+    font-size: 1em;
+  }
+  .statesman a {
+	font-size: 1.2em;
+  }
+  
+  .taichi .top h1, .kungfu .top h1, .family .top h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 2.1em;
+	font-weight: normal;
+  }
+
+  .pre-k .top h1, .apprentice .top h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 2.1em;
+	font-weight: normal;
+  }
+.apprentice .top h2{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1em;
+}
+	
+    .taichi .special, .kungfu .special, .pre-k .special {
+        margin: 0em 0em .5em 0em;
+    }
+	.info p, .pre-k .info p {
+		font-size: 1.1em;
+	}
+    
+
+    .testimonial>img {
+        padding-top: 1em;
+        display: inline-block;
+    }
+    .testimonial>p {
+        margin-left: 5px;
+        font-size: 1em;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 0;
+        width: 22%;
+    }
+    .testimonial-inset {
+        margin-left: 5px;
+        font-size: 1em;
+        line-height: inherit;
+        width: 65%;
+        display: inline-block;
+    }
+    .testimonial-inset img {
+        margin-top: 1em;
+    }
+    .testimonial-link {
+        text-align: right;
+        font-size: 1em;
+    }
+
+    .gohring-bio img {
+        padding: 0;
+        margin: 0 0 .5em 0;
+        max-width: 28%
+    }
+    .gohring-bio p {
+        font-size: 1em;
+        padding: 0 1em;
+        text-align: left;
+        line-height: 1.4em;
+    }
+    .gohring-bio h1 {
+        font-size: 2.1em;
+        font-weight: bold;
+    }
+    .gohring-bio h2 {
+        clear: both;
+        font-size: 1.2em;
+        text-align: center;
+        padding-top: .75em;
+    }
+    
+    .map img {
+        float: left;
+        margin: 0 1em 3em 0;
+
+    }
+
+    .map h1 {
+        font-size: 2.1em;
+        line-height: 1em;    
+    }
+
+    .map h2 {
+        font-size: 1.7em;
+        line-height: 1.2em;
+        margin-bottom: 1.5em;
+    }
+    .map p {
+        font-size: 1.2em;
+        line-height: 1.2em;
+        display: inline;
+    }
+    
+    .apprentice .content {
+        font-size: 1em;
+        line-height: normal;
+    }
+    .apprentice .content h2 {
+        font-size: 1.1em;
+    }
+/*
+    .pictured {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: .9em;
+        margin: .5em 0 0 0;
+    }
+*/
 }

@@ -1,4 +1,43 @@
 @charset "UTF-8";
+
+/*! responsive-nav.js 1.0.34 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 /* Simple fluid media
    Note: Fluid media requires that you remove the media's height and width attributes from the HTML
    http://www.alistapart.com/articles/fluid-images/ 
@@ -42,7 +81,6 @@ img, object, embed, video {
 	list-style-image: none;
 	margin: 0;
 	padding: 0;
-	/* [disabled]background-color: #000000; */
 }
 
 /* Mobile Layout: 480px and below. */
@@ -51,9 +89,6 @@ img, object, embed, video {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: .5em;
-	/*width: 95.25%;
-	padding-left: 2.375%;
-	padding-right: 2.375%;*/
 	width: 95%;
 	padding-left: 1%;
 	padding-right: 1%;
@@ -63,17 +98,46 @@ img, object, embed, video {
 	max-width: 750px;
 	border-radius: 3em;
 }
+
+.birthday .gridContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+.hide_mobile {
+    display: none;
+}
+
 .top {
-	/*white-space: nowrap;*/
-	padding-bottom: 1em;
-	padding-top: 2em;
+    padding: 1em 0 0 0;
+}
+/*
+.pre-k .top, .family .top, .apprentice .top, .birthday .top {
+    padding: 1em 0 0 0;
+}
+*/
+.family .top h1 {
+    padding: 0 .5em;
+}
+.home .title {
+    margin-bottom: .5em;
+}
+.home .tagline {
+    margin-bottom: .5em;
 }
 .title {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-	font-size: 2.15em;
+	font-size: 2em;
 	margin-top: 0em;
-	line-height: 0.4em;
+	line-height: 1em;
+    max-width: 13em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pre-k .title, .apprentice .title, .family .title, .birthday .title {
+    line-height: 1em;
 }
 .tagline {
 	text-align: center;
@@ -86,9 +150,20 @@ img, object, embed, video {
 .taglineLeft {
 	margin-right: .3em;
 }
+
 .red {
 	color: #FC1D00;
 }
+.darkRed {
+    color: #B8070D;
+}
+.blueGreen {
+    color: #408080;
+}
+.underline {
+    text-decoration: underline;
+}
+
 .special {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #F30004;
@@ -99,6 +174,7 @@ img, object, embed, video {
 	padding-bottom: 0.4em;
 	text-transform: uppercase;
 	font-weight: bold;
+    font-size: .9em;
 }
 .specialText {
 	padding-top: 0.3em;
@@ -106,6 +182,10 @@ img, object, embed, video {
 	padding-left: 0.4em;
 	padding-bottom: 0.15em;
 	background-color: #EEEEEE;
+}
+.specialText:hover, .specialTest:active {
+	background-color: #F30004;
+	color: #fff;
 }
 .specialText a {
 	text-decoration: none;
@@ -116,14 +196,17 @@ img, object, embed, video {
 	text-align: center;
 	border-width: medium;
 }
+.topimage img {
+    margin-right: auto;
+    margin-left: auto;
+}
 .topimage p {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 90%;
 	max-width: 27em;
 }
-.menu {
-}
+
 .navLi {
 	background-color: #FFFFFF;
 	text-align: center;
@@ -145,14 +228,10 @@ img, object, embed, video {
 .navLi:hover a, .navLi:active a {
 	color: #FFFFFF;
 }
-.content1 {
-}
 .zeroMargin_mobile {
 margin-left: 0;
 }
-.hide_mobile {
-display: none;
-}
+
 .centered {
 	text-align: center;
 }
@@ -200,21 +279,58 @@ p.fluid {
 	display: inline-block;
 	font-weight: bold;
 }
+.secondNav a:hover, .secondNav a:active {
+	color: #fff;
+	background-color: #00e; 
+}
 .secondNav div {
 	margin: .2em;
 	display: inline-block;
 }
+.members .secondNav a {
+    text-transform: none;
+}
+.members .secondNav div {
+    display: block;
+}
+
 .content {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 }
-.formContainer {
-}
-.fluid.content .fluid.centered.secondNav {
+
+.footer {
+	margin: 1em;
 }
 .footer a {
 	color: #FFFFFF;
 	text-decoration: none;
+}
+.statesman p {
+    font-size: .8em;
+}
+.statesman a {
+    float: right;
+    text-align: right;
+    text-decoration: none;
+    color: #FC1D00;
+    font-size: 1.3em;
+	padding: 0em .5em;
+}
+.statesman a:hover, .statesman a:active {
+    color: #fff;
+	background-color: #FC1D00;
+}
+.statesmanLogo {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.statesmanTerbay {
+    float: left;
+    width: 30%;
+    margin: 1em 1em .5em 0em;
+    max-width: 8em;
 }
 .news8Link {
 	width: 60%;
@@ -229,21 +345,34 @@ p.fluid {
 .news8Link a {
 	text-decoration: none;
 }
+
 .nav-toggle {
 	float: left;
+/*    width: 100%;*/
 }
-
-span.nav-toggle {
+.nav-toggle img {
+    float: left;
+}
+.nav-toggle span {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	padding: .3em 0em 0em .3em;
+    float: left;
 	
 }
+.digits {
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    font-size: 1.2em;
+	padding: 0em .5em 0em .3em;
+    text-transform: uppercase;
+    float: right;
+}
+
 .embed-container { 
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0; overflow: hidden;
-	max-width: 100%;
 }
 .embed-container iframe, .embed-container object, .embed-container embed {
 	position: absolute;
@@ -260,6 +389,11 @@ span.nav-toggle {
 	border-top-style: solid;
 	border-color: #999999;
 }
+.topBorderThin {
+	border-color: #999999;
+	border-top-style: solid;
+	border-top-width: thin;
+}
 .topMargin {
 	margin-top: 1em;
 }
@@ -272,13 +406,326 @@ span.nav-toggle {
 }
 .breakRight {
 	display: inline-block;
-	padding-left: .3em;
+	padding-left: .1em;
 }
-/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+.title .breakLeft {
+	display: inline-block;
+	padding-right: .1em;
+}
+.title .breakRight {
+	display: inline-block;
+	padding-left: .1em;
+}
+.noTopMargin {
+	margin-top: 0;
+}
+.bigBottom {
+	margin-bottom: 1.7em;
+}
+.smallBottom{
+    margin-bottom: .8em;
+}
+.bottomContent {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+}
 
-@media only screen and (min-width: 481px) {
+/************************************************************************************************************************/
 
-.gridContainer {
+/* Need to consolidate with .title tags.... */
+.taichi .top h1, .kungfu .top h1, .family .top h1, .rotation .top h1, .schedule .top h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+.pre-k .top h1, .apprentice .top h1, .members .top h1, .birthday .top h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+.apprentice .top h2, .members .top h2, .birthday .top h2, .rotation .top h2, .schedule .top h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: .85em;
+}
+
+.info img {
+	float: left;
+	width: 30%;
+	max-width: 20em;
+}
+.family .info img {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    width: 35%
+}
+.pre-k .info .image1 {
+    max-width: none;
+    width: 35%;
+    margin: 1em;
+}
+.pre-k .info .image2 {
+    max-width: none;
+    width: 25%;
+    margin: 1em 0 1em 1em;    
+    float: right;
+}
+.info p {
+	font-size: .8em;
+}
+.pre-k .info p {
+    line-height: 1.2em;
+    margin: 1em;
+    font-size: .8em;
+}
+.info-tagline {
+    text-align: center;
+}
+
+.testimonial>img {
+    padding-top: 1em;
+    float: left;
+}
+
+.testimonial>p {
+    margin-left: 70px;
+	margin-bottom: 5px;
+    font-size: .8em;
+}
+
+.testimonial-inset {
+    margin-left: 70px;
+    font-size: .8em;
+    line-height: 1.2;
+}
+.testimonial-link {
+    text-align: right;
+    font-size: .8em;
+}
+.testimonial-link a {
+    text-decoration: none;
+    color: #289FD8;
+    margin-right: 1em;
+    padding-left: .5em; 
+    padding-right: .5em;
+    
+}
+.testimonial-link a:hover, .testimonial-link a:active {
+    color: #ffffff;
+    background-color: #289FD8;
+}
+
+.gohring-bio img {
+    float: right;
+	width: 28%;
+    padding: 0 0 0 1em;
+}
+
+.gohring-bio p {
+    font-size: .9em;
+    padding: 0 1em;
+    text-align: left;
+    line-height: 1.3em;
+}
+
+.gohring-bio h1 {
+    font-size: 1.6em;
+}
+
+.gohring-bio h2 {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.map img {
+    display: inline-block;
+}
+
+.map h1 {
+    font-size: 1.6em;
+    line-height: 1em;
+}
+
+.map h2 {
+    font-size: 1.4em;
+    line-height: 1.1em;
+}
+.map p {
+    font-size: 1em;
+    line-height: 1.2em;
+    display: inline-block;
+}
+
+.map-link {
+	background-color: #FFFFFF;
+    padding: 0 .2em;
+    margin: 0;
+}
+.map-link:hover, .map-link:active {
+	background-color: #F30004;
+	color: #fff;
+}
+a.map-link {
+    font-size: 1.2em;
+	color: inherit;
+    text-decoration: none;
+}
+
+.apprentice .content,
+.birthday .content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.85em;
+    line-height: 1.1em;
+}
+.apprentice .content h1,
+.birthday .content h1{
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 1em;
+    font-weight: lighter;
+}
+.apprentice .content h2 {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: lighter;
+}
+.pictured {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: .9em;
+    margin: .5em 0 0 0;
+}
+.apprentice .left {
+    float: left;
+    margin: .5em 1em .5em 0;
+}
+.apprentice .right {
+    float: right;
+    margin: .5em 0 .5em 1em;
+
+}
+.apprentice .left, .apprentice .right {
+    width: 30%;
+    max-width: 10em;
+}
+.app-test-top {
+    width: 55%;
+    float: right;
+    margin: 1em 0 1em 1em;
+}
+
+.members img.gohring {
+    display: block;
+    width: 90%;
+    max-width: 17em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.birthday .image1 {
+    border: solid 1px;
+    margin: 1em;
+    float: right;
+    width: 45%;
+}
+.birthday .image2 {
+    width: 100%;
+}
+
+.reservation {
+    display: inline;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+.reservation a {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEEEEE;
+	color: #F30004;
+	text-decoration: none;
+    text-transform: uppercase;
+	font-weight: bold;
+    font-size: 1em;
+    width: auto;
+    padding: .7em 1em;
+    border: solid 1px;
+    border-radius: .7em;
+}
+
+.reservation a:hover, .reservation a:active {
+	background-color: #F30004;
+	color: #fff;
+}
+
+.candidates {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.candidates div.top {
+    padding-top: .2em;
+    padding-bottom: .2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.candidates .top h2 {
+    font-size: 1.5em;
+}
+.candidates .top h3 {
+    font-size: 1.1em;
+}
+.candidates  p {
+    font-size: .9em;
+}
+
+.belts {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+.rotation .beltImage {
+    display: inline;
+    width: 9%;
+    margin: 0.4%;
+}
+.rotation .content {
+    font-size: .8em;
+}
+.rotation .content h2 {
+    font-size: 1.1em;
+}
+.rotation .schedule-link {
+    float: right;
+}
+
+.schedule .content {
+    font-size: .9em;
+    font-weight: bolder;
+}
+.schedule .content .myH {
+    font-size: 1.1em;
+}
+.schedule .rotation-link {
+    font-size: .8em;
+    font-weight: lighter;
+}
+.schedule .content.bottomContent {
+    font-weight: normal;
+}
+
+/*************************************************************************************************/    
+@media screen and (min-width: 40em) {
+    .hide_mobile {
+        display: inherit;
+    }
+    li.hide_desktop {
+        display: none;
+    }
+    
+  .gridContainer {
 	width: 90.675%;
 	padding-left: 1.1625%;
 	padding-right: 1.1625%;
@@ -286,76 +733,239 @@ span.nav-toggle {
 	float: none;
 	margin-left: auto;
 	margin-top: .5em;
+    position: relative;
+  }
+    
+    .gridContainer>a.logo {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 90px;
+    }
+    .gridContainer>span.digits {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        font-size: 1em;
+    }
+    
+  .navLi {
+  	clear: none;
+  }
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  
+  /* my addition - rf */
 
-}
-.top {
-}
-.title {
-}
-h1.title {
-}
-h2.title {
-}
-.tagline {
-}
-.topimage {
-}
-.menu {
-}
-.navLi {
-clear: none;
-/*margin-left: 2.5641%;*/
-}
-.content1 {
-}
-.hide_tablet {
-display: none;
-}
-.zeroMargin_tablet {
-margin-left: 0;
-}
+  .navList {
+	  width: 36.7em;
+	  float: none;
+  }
+    .family .navList {
+       width: 29em;
+   }
+    .members .navList, .birthday .navList, .rotation .navList, .schedule .navList {
+        width: 33em;
+    }
+    .schedule .navList {
+        margin-bottom: 2.5em;
+    }
+    li.navLi {
+	  width: auto;
+	  border-right-style: solid;
+	  border-right-width: thin;
+	  padding: .2em .3em .1em .3em;
+	  font-size: 90%;
+  }
+  li.navLi.noBorder{
+	  border: none;
+  }
 
-/* My additions - rf */
-.navIcon {
-	display: none;
-}
+  .title {
+	  font-size: 2.4em;
+  }
+    .pre-k .title, .family .title, .apprentice .title {
+        max-width: 12em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        margin-bottom: 0;
+     }
+    .pre-k .title {
+        margin-bottom: .5em;
+    }
+    
+  .tagline {
+	  font-size: 1.5em;
+  }
+    
+  .top {
+	  margin: 1em 0em 0em 0em;
+  }
+.pre-k .top, .family .top, .apprentice .top, .birthday .top {
+        padding-bottom: 0;
+    }
+  .special {
+	margin: 1em 0em;
+  }
+    
+    .members .secondNav div {
+    display: inline-block;
+    }
+  .statesman p {
+    font-size: 1em;
+  }
+  .statesman a {
+	font-size: 1.2em;
+  }
+  
+  .taichi .top h1, .kungfu .top h1, .family .top h1, .rotation .top h1, .schedule .top h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 2.1em;
+	font-weight: normal;
+  }
 
+  .pre-k .top h1, .apprentice .top h1, .members .top h1, .birthday .top h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 2.1em;
+	font-weight: normal;
+  }
+.apprentice .top h2, .members .top h2, .birthday .top h2, .rotation .top h2, .schedule .top h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1em;
 }
+	
+    .taichi .special, .kungfu .special, .pre-k .special {
+        margin: 0em 0em .5em 0em;
+    }
+	.info p, .pre-k .info p {
+		font-size: 1.1em;
+	}
+    
 
-/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+    .testimonial>img {
+        padding-top: 1em;
+        display: inline-block;
+    }
+    .testimonial>p {
+        margin-left: 5px;
+        font-size: 1em;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 0;
+        width: 22%;
+    }
+    .testimonial-inset {
+        margin-left: 5px;
+        font-size: 1em;
+        line-height: inherit;
+        width: 65%;
+        display: inline-block;
+    }
+    .testimonial-inset img {
+        margin-top: 1em;
+    }
+    .testimonial-link {
+        text-align: right;
+        font-size: 1em;
+    }
 
-@media only screen and (min-width: 769px) {
+    .gohring-bio img {
+        padding: 0;
+        margin: 0 0 .5em 0;
+        max-width: 28%
+    }
+    .gohring-bio p {
+        font-size: 1em;
+        padding: 0 1em;
+        text-align: left;
+        line-height: 1.4em;
+    }
+    .gohring-bio h1 {
+        font-size: 2.1em;
+        font-weight: bold;
+    }
+    .gohring-bio h2 {
+        clear: both;
+        font-size: 1.2em;
+        text-align: center;
+        padding-top: .75em;
+    }
+    
+    .map img {
+        float: left;
+        margin: 0 1em 3em 0;
 
-.gridContainer {
-	width: 88.5%;
-	/*max-width: 1232px;*/
-	padding-left: 0.75%;
-	padding-right: 0.75%;
-	/*margin: auto;*/
-	clear: none;
-	float: none;
-	margin-left: auto;
-}
-.top {
-}
-.title {
-}
-.tagline {
-}
-.topimage {
-}
-.menu {
-}
-/*.navLi {
-clear: both;
-margin-left: 0;
-}*/
-.content1 {
-}
-.zeroMargin_desktop {
-margin-left: 0;
-}
-.hide_desktop {
-display: none;
-}
+    }
+
+    .map h1 {
+        font-size: 2.1em;
+        line-height: 1em;    
+    }
+
+    .map h2 {
+        font-size: 1.7em;
+        line-height: 1.2em;
+        margin-bottom: 1.5em;
+    }
+    .map p {
+        font-size: 1.2em;
+        line-height: 1.2em;
+        display: inline;
+    }
+    
+    .home .content {
+        font-size: 1em;
+    }
+    
+    .apprentice .content,
+    .birthday .content {
+        font-size: 1em;
+        line-height: normal;
+    }
+    .apprentice .content h2 {
+        font-size: 1.1em;
+    }
+
+    .birthday .content h2 {
+        font-size: 1.35em;
+    }
+
+    .candidates .top h2 {
+        font-size: 2em;
+    }
+    .candidates .top h3 {
+        font-size: 1.2em;
+    }
+    .candidates  p {
+        font-size: 1em;
+    }
+    
+    .rotation .beltImage {
+        margin: 0.7%;
+    }
+    .rotation .content {
+        font-size: .9em;
+    }
+    .rotation .content h2 {
+        font-size: 1.2em;
+    }
+    
+    .schedule .content {
+        font-size: 1em;
+        font-weight: bolder;
+    }
+    .schedule .content .myH {
+        font-size: 1.2em;
+    }
+
 }
